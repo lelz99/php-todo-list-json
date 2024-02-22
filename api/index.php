@@ -16,6 +16,8 @@ if($add_task){
 
     $tasks = json_encode($tasks); 
 
+    file_put_contents($source_path, $tasks);
+
 } 
 
 echo $tasks;
