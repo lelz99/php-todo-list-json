@@ -28,9 +28,9 @@
 <body>
     <div id="root" class="container mt-5">
         <p v-for="task in tasks">{{task.text}}</p>
-        <form action="">
-            <input type="text" name="" id="">
-            <button>inserisci</button>
+        <form @submit.prevent="addTask">
+            <input v-model.trim="newTask" type="text" name="" id="">
+            <button type="submit">inserisci</button>
         </form>
     </div>
 </body>
